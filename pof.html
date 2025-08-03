@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suzain</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('https://wallpapers.com/images/hd/plain-black-background-02fh7564l8qq4m6d.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 80px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin-left: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero-content .btn {
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #000;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .btn-dark {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                padding: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 10px 20px;
+                text-align: left;
+            }
+
+            .hero-content {
+                margin-left: 20px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Personal <span style="font-weight: 300;">View</span></h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#page">Pages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>My Self Suzain</h1><br>
+            <button class="btn">Read More</button>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about">
+            <div class="about-text">
+                <h2>About</h2>
+                <p>
+                    Hi, my name is Mohammad Suzain. I am 20 years old, originally from Nanded, and currently studying in
+                    Pune.
+                    I have completed my B.Sc. in Computer Science from Indira College. My father is in real estate
+                    business and is my inspiration.
+                    My hobbies include playing cricket and listening to music. My dream is to become a successful
+                    businessman like my father.
+                </p>
+                <button class="btn-dark">Download CV</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" style="background: black; color: white;">
+        <div style="max-width: 1200px; margin: auto;">
+            <h2
+                style="font-size: 32px; border-bottom: 2px solid rgb(25, 25, 25); display: inline-block; padding-bottom: 5px;">
+                Projects</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div
+                    style="flex: 1; min-width: 250px; background:  rgba(255, 255, 255, 0.1); padding: 20px; border: 2px solid white;">
+                    <h3>🎵 Project 1: Spotify Clone </h3><br>
+                    <ul>
+                        <p>
+                            <li>A basic clone of the Spotify web player built using HTML, CSS, and JavaScript. The UI is
+                                inspired by Spotify's minimal and clean interface, and includes your personal branding
+                                (e.g., name and photo at the top).</li>
+                        </p><br>
+                        <li>Stylish, responsive music player UI</li>
+                        <li>Visuals like song progress bar and icons</li>
+                        <li>Mobile-friendly design</li>
+                    </ul>
+                </div>
+                <div
+                    style="flex: 1; min-width: 250px; background: rgba(255, 255, 255, 0.1); padding: 20px;border: 2px solid white;">
+                    <h3>✅ Project 2: Tic Tac Toe Game</h3><br>
+                    <ul>
+                        <p>
+                            <li>A simple, interactive web-based Tic Tac Toe game created using HTML, CSS, and
+                                JavaScript. It
+                                allows two players to play turn-by-turn and checks for a win or draw condition. </li>
+                        </p><br>
+                        <li>Tic Tac Toe with HTML, CSS, JS</li>
+                        <li>Player X/O, winner check</li>
+                        <li>Restart button</li>
+                    </ul>
+                </div>
+                <div
+                    style="flex: 1; min-width: 250px; background: rgba(255, 255, 255, 0.1); padding: 20px;border: 2px solid white;">
+                    <h3>Pending</h3>
+                    <p>Project in progress</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2
+            style="text-align: center; font-size: 32px; border-bottom: 2px solid rgba(255, 255, 255, 0.966); padding-bottom: 5px;">
+            Skills
+        </h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s"
+                alt="HTML" style="width: 100px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="CSS" style="width: 100px;">
+            <img src="https://t4.ftcdn.net/jpg/00/75/92/23/360_F_75922332_V8jiJ9I2F9d9HqV7RtPzUAxr5s7YHWOd.jpg" alt="JS"
+                style="width: 100px;">
+            <img src="https://i.pinimg.com/736x/6e/46/e7/6e46e7dbe2bb73dacc055e5dbd85c3ad.jpg" alt="Bootstrap"
+                style="width: 100px;">
+            <img src="https://img.freepik.com/premium-vector/sql-structured-query-language-icon-label-internet-security-networking-vector-stock-illustration_100456-10733.jpg"
+                alt="SQL" style="width: 100px;">
+            <img src="https://www.shutterstock.com/image-vector/python-programming-language-icon-vector-260nw-2486626399.jpg"
+                alt="Python" style="width: 100px;">
+        </div>
+    </section>
+
+    <section id="page" style="background: #111; color: white; text-align: center;">
+        <h2>Page</h2>
+        <div style="margin-top: 20px;">
+            <img src="img.jpeg" alt="Client" style="width: 100px; height: 100px; border-radius: 50%;">
+            <h4>Md Suzain</h4>
+            <p style="font-style: italic;">"Hi, I'm Mohammad Suzain – 20-year-old passionate about business, music, and
+                cricket."</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 style="text-align: center; font-size: 32px; border-bottom: 2px solid black; padding-bottom: 5px;">Contact
+        </h2><br>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+            <div style="flex: 1; min-width: 280px;"><br>
+                <p><strong>Email:</strong> mdsuzain59@gmail.com</p>
+                <p><strong>Phone:</strong> +91 8857039348</p>
+                <p><strong>Instagram:</strong> Suzain___077</p>
+            </div>
+            <div style="flex: 1.5; min-width: 280px;">
+                <h3>Get In Touch</h3>
+                <form>
+                    <input type="text" placeholder="Name" style="width: 100%; padding: 10px; margin: 10px 0;">
+                    <input type="email" placeholder="Email" style="width: 100%; padding: 10px; margin: 10px 0;">
+                    <input type="text" placeholder="Phone" style="width: 100%; padding: 10px; margin: 10px 0;">
+                    <textarea placeholder="Message..." rows="4"
+                        style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+                    <button type="submit"
+                        style="padding: 10px 20px; background: black; color: white; border: none; border-radius: 20px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #111; color: white; text-align: center; padding: 20px;">
+        <p>© 2025 Personal View. All Rights Reserved | Design by Md.Suzain</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
